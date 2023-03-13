@@ -1,0 +1,283 @@
+@charset "utf-8";
+@charset "utf-8";
+/* 영역확인 */
+/* #intro{
+  background-color: yellow;
+} */
+/* #intro .t_box {
+  background-color: aliceblue;
+} */
+
+
+/* 1.mslide 영역 */
+
+#mslide .banner_wrap{
+  position:relative;
+}
+#mslide .banner_box {
+  position:absolute;
+}
+
+#mslide .banner_box:first-of-type{
+  z-index:3;
+}
+#mslide .banner_box:nth-of-type(2){
+  z-index:2;
+}
+#m_slide .banner_box:last-of-type{
+  z-index:1;
+}
+.on{color:#fff !important;
+font-size:32px !important;
+font-weight:bold !important;
+}
+
+
+  /*  텍스트, 넘버박스, 아이콘, 버튼 */
+#mslide .t_box p{
+  color:#fff;
+  font-size:18px;
+  font-weight: bold;
+  letter-spacing: -3%;
+  padding-bottom:20px;
+}
+#mslide .t_box h2{
+  color:#fff;
+  font-size:24px;
+  font-weight:900;
+}
+
+#mslide .n_box{
+  left:50% !important;
+  transform:translateX(-50%);
+}
+
+#mslide .n_box>li{
+  font-size:18px;
+  color:#b2b2b2;
+  padding: 0px 10px 0px 10px;
+  cursor:pointer;
+}
+
+#mslide i{
+  cursor:pointer;
+  font-size:20px;
+  font-weight: bold;
+}
+
+
+
+  
+#mslide .n_box, #mslide i,#mslide .cursor_box{
+  z-index:100;
+}
+
+/* 2.신한소개 영역 */
+#intro{
+  overflow: hidden;
+}
+
+
+#intro:after{
+  content:"";
+  display:block;
+  position:absolute;
+  width:390px; height:390px;
+  background: rgba(0, 70, 255, 0.2);
+  border-radius: 50%;
+  top:-187px; right:-187px;
+  z-index: -1000;
+}
+
+#intro:before{
+  content:"";
+  display:block;
+  position:absolute;
+  width:249px; height:249px;
+  background: rgba(0, 70, 255, 0.4);
+  border-radius: 50%;
+  z-index:-1000;
+  left:-145px;top:1015px;
+
+}
+
+#intro .t_box{
+  padding-top:80px;
+}
+
+#intro .t_box h2{
+  /* padding:120px 0px 20px 0px; */
+  font-size:32px;
+  letter-spacing: -3%;
+  font-weight: bold;
+
+}
+#intro .t_box h2 span{
+  color:#0046ff;
+}
+#intro .t_box p{
+  padding:20px 0px 40px 0px;
+  font-size:14px;
+  line-height: 24px;
+  color:#666;
+  letter-spacing: -3%;
+}
+
+#intro .img_box01, .img_box02, .img_box03{
+  /* width:340px; height:240px; */
+  position: relative;
+  margin:0px auto;
+}
+
+
+#intro .img_box01 img,.img_box02 img, .img_box03 img{
+  width:100%;
+  cursor:pointer;
+}
+
+
+
+#intro .t_box01 h3,.t_box02 h3,.t_box03 h3{
+  padding:20px 0px 10px 0px;
+  font-size:24px;
+  font-weight: bold;
+}
+#intro .t_box01 p,.t_box02 p,.t_box03 p{
+  font-size:14px;
+  color:#333;
+  line-height: 24px;
+  letter-spacing: -3%;
+  /* word-break: keep-all; */
+}
+
+#intro .img_box02{
+  margin-top:40px;
+}
+#intro .img_box03{
+  margin-top:40px;
+}
+#intro .t_box03{
+  margin-bottom:80px;
+}
+
+
+
+      /* 3.IR투자자 영역 */
+/* 3.IR투자자 영역 */
+#invest {
+  background-image: url(/img/investbg.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 652px;
+  overflow: hidden;
+}
+
+#invest .wrap {
+  box-sizing: border-box;
+}
+
+#invest h2 {
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+  padding: 75px 0px 40px 0px;
+}
+
+#invest .wrap>p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -3%;
+  padding-bottom: 20px;
+}
+
+#invest .s_wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+#invest .swiper-container {
+  width: 300%;
+  padding-top: 30px;
+}
+
+#invest .s_box {
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  width: 250px;
+  height: 268px;
+}
+
+
+      /* 4.보도자료 영역 */
+
+
+        #board h2{
+          padding:80px 0px 40px 0px;
+          font-size:32px;
+          font: weight 900px;
+          color:#333;
+          letter-spacing: -3%;
+        }
+
+        #board .twrap{
+          border-top:5px solid #000;
+        }
+
+        #board ul li p:first-child{
+          color:#666;
+          font-size:14px;
+          padding-top:30px;
+        }
+
+        #board ul li p:last-child{
+          width:100%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis; 
+        }
+        #board ul li p a{
+          font-weight:bold;
+          color:#333;
+          font-size:14px;
+        }
+
+        #board ul li{
+          border-bottom:1px solid #333;
+          padding-bottom:30px;
+        }
+        #board div .detail{
+          border:1px solid #0046ff;
+          width:160px;
+          height:38px;
+          text-align:center;
+          line-height: 30px;
+          margin-left:50%;
+          transform: translateX(-50%);
+          margin-bottom:80px;
+        }
+
+        #board div .detail a{
+          font-size:12px;
+          color:#0046ff;
+        }
+
+        #board ul{
+          padding-bottom: 20px;
+        }
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
