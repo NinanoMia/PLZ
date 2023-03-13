@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <!-- bootstrap icon -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('#t_btn').click(function(){
+          $('html, body').animate({scrollTop:0},500);
+          return false;
+        });
+        $(window).scroll(function(){
+        let spos = $(this).scrollTop();
+        console.log(spos);
+        if(spos>1500){
+        $("#t_btn").fadeIn();
+        }else{
+          $("#t_btn").fadeOut();
+        }
+      });
+
+      });
+    </script>
+      <style>
+        #t_btn{
+          display: none;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: rgba(0, 70, 255, 0.5);
+          position: relative;
+          text-align: center;
+          position: fixed;
+          right: 2%;
+          bottom: 5%;
+        }
+        #t_btn>i{
+          position: absolute;
+          line-height: 60px;
+          color: #fff;
+          font-size: 30px;
+          transform: translate(-15px, -3px);
+        }
+      </style>
+</head>
+<body>
+  <a href="#" title="맨위로 올라가기" id="t_btn">
+    <i class="bi bi-chevron-up"></i>
+  </a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

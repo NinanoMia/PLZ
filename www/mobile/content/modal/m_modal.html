@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <style>
+    *{
+      padding: 0;margin: 0;
+    }
+    #modal{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,.5);
+    }
+    #banner{
+      overflow: hidden;
+      width: 350px;
+      
+      position: absolute;
+      top: 50%;left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    #banner>#img{
+      position: relative;
+      display: flex;
+      
+    }
+    #banner img{
+      vertical-align: top;
+      height: 470px;
+    }
+    #banner>p{
+      line-height: 40px;
+      background-color: #fff;
+      padding: 0px 20px;
+      position: relative;
+    }
+    #banner>p>input[type=button]{
+      position: absolute;
+      border: none;
+      line-height: 40px;
+      background: none;
+      right: 20px;
+    }
+    ul, li{
+      list-style: none;
+    }
+    .c_btn{
+      /* display: none; */
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+    }
+    .c_btn>li{
+      /* display: none; */
+      width: 15px;
+      height: 15px;
+      background: #ffffff;
+      border-radius: 50%;
+      margin: 0px 2px;
+      transition: 0.3s;
+      position: relative;
+      bottom: 22px;
+      border: 1px solid #0046FF;
+    }
+    i.bi{
+      cursor: pointer;
+      position: absolute;
+      color: #333;
+      background: rgba(255,255,255,.3);
+      top:45%;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    i.bi-chevron-right{
+      right: 0;
+    }
+    .on{
+      background:#0046FF !important;
+      width:50px !important;
+      border-radius:10px !important;
+      border: 1px solid #fff !important;
+    }
+    #m_close{
+      cursor: pointer;
+    }
+    label{
+      font-size: 14px;
+    }
+  </style>
+  <!-- 제이쿼리 연결하기 -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script>
+    $(function(){
+      let modal = `
+      <div id="modal">
+          <div id="banner">
+            <ul id="img">
+            <li><a href="https://shcard.incruit.com/main/main.asp" target='_blank' title="채용공고"><img src="./images/Group 583.png" alt="채용공고"></a></li>
+            <li>
+            <a href="" title="결산공고"><img src="./images/Group 584.png" alt="결산공고"></a></li>
+            </ul>
+            <ul class="c_btn">
+              <li class="on">&nbsp;</li>
+              <li>&nbsp;</li>
+            </ul>
+            <i class="bi bi-chevron-left"></i>
+            <i class="bi bi-chevron-right"></i>
+            <p>
+              <input type="checkbox" id="ch">
+              <label for="ch">일주일간 창 보지 않기</label>
+              <input type="button" value="닫기" id="m_close">
+            </p>
+          </div>
+        </div>`;
+        $('body').append(modal);
+        $('#modal>#banner>p>#m_close').click(function(){
+          $('#modal').hide();
+        });
+    });
+  </script>
+
+  <!--제이쿼리 쿠키 연결하기-->
+  <script src="./js/jquery.cookie.js"></script>
+  <script>
+    $(function() {
+        if($.cookie('popup')=='none') {
+            // 쿠키 파일이 현재 브라우저에 저장되어 있는지를 확인하여 none이면 모달이 안나오게 한다.
+            $('#modal').hide();
+        }
+
+        
+
+        //오늘하루열지않음을 클릭시쿠키가 생성이 되고 그렇지 않으면 그냥 모달을 숨기는 내용
+  function closePop() {
+    let ch = $('#ch'); // 체크박스 변수
+      if(ch.is(':checked')) {
+        alert('체크박스');
+          $.cookie('popup', 'none', {expires:7, path:'/'}); // 쿠키를 생성한다.
+      }
+      $('#modal').hide();
+  }
+
+    $('#modal>#banner>p>label').click(function(){
+      $.cookie('popup', 'none', {expires:7, path:'/'}); // 쿠키를 생성한다.
+    })
+    
+    $('#modal a').click(function(){
+      $('#modal').fadeOut();
+    })
+
+    // 
+
+    });
+
+  </script>
+<script>
+  $(function(){
+  //1. 변수선언
+    let slide = $('#banner #img');
+    let l_btn = $('.bi-chevron-left');
+    let r_btn = $('.bi-chevron-right');
+    let img_w = 352.5;
+    let n  = $('.c_btn>li').index();
+    console.log(n);
+
+    function moveLeft(n){
+        slide.stop().animate({left:-img_w*n},300);  //0 원래위치로 돌아옴.
+        $('.c_btn li').removeClass('on');
+        $('.c_btn li').eq(n).addClass('on');
+        console.log('moveleft!')
+    }
+
+    Timer = setInterval(function(){
+      if(n==0){
+        n=1;
+      }else{
+        n=0;
+      };
+      moveLeft(n);}
+      ,5000
+    );
+
+    l_btn.click(function(){
+      clearInterval(Timer);
+    },function(){
+      if(n==0){
+        n=1;
+      }else{
+        n=0;
+      };
+      moveLeft(n);}
+      ,5000);
+
+    r_btn.click(function(){
+      clearInterval(Timer);
+    },function(){
+      if(n==0){
+        n=1;
+      }else{
+        n=0;
+      };
+      moveLeft(n);}
+      ,5000);
+
+    $('.c_btn li:first-child').click(function(){
+      clearInterval(Timer);
+    },function(){
+      moveLeft(0);}
+      ,5000);
+
+  $('.c_btn li:last-child').click(function(){
+      clearInterval(Timer);
+    },function(){
+      moveLeft(1);}
+      ,5000);
+  });
+  </script>
+</head>
+<body>
+</body>
+</html>
