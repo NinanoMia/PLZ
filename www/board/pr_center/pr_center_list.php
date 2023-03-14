@@ -1,5 +1,5 @@
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhanv2/shinhan/www/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/header.php";
 
     $query = "select * from s_board order by idx desc";    //역순 출력
     // $query = "select * from s_board order by idx desc limit 5";    //역순 5개 출력
@@ -125,5 +125,5 @@
         
     </main>
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhanv2/shinhan/www/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/footer.php";
 ?>

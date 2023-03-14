@@ -1,5 +1,5 @@
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhanv2/shinhan/www/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/header.php";
 
     $idx = $_GET['idx'];
     // $query = "SELECT title, summary1, summary2, summary3, content, img_file, date from s_board where idx = '$idx'";
@@ -12,8 +12,8 @@
 ?>
     <main>
         <link rel="stylesheet" href="./css/pr_center_view.css" type="text/css">
-        <form method="post">
         <section class="spot_visual">
+            <form method="post">
             <div class="typo">
                 <h2>PR센터</h2>
                 <p>
@@ -125,32 +125,36 @@
                 </ul>
             </article>
 
-            <a href="#" title="보도자료 목록보기" class="btn_list">목록보기</a>
-
-            <?php
-                // if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
-                    <button class="read_btn1" onclick="location.href='pr_center_modify.php?idx=<?= $idx ?>'">수정하기</button>
-
-                    <button class="read_btn1" onclick="ask();">삭제하기</button>
-
-                <script>
-                    function ask() {
-                        if (confirm("게시글을 삭제하시겠습니까?")) {
-                            window.location = "delete.php?idx=<?= $idx ?>";
-                        }
-                    }
-                </script>
-
-            <?php 
-        // } 
-        ?>
+            
 
 
 
+        </form>
         </section>
 
-            </form>
+        <section>
+        <a href="#" title="보도자료 목록보기" class="btn_list">목록보기</a>
+
+<?php
+    // if (isset($_SESSION['userid']) and $_SESSION['userid'] == $rows['id']) { ?>
+        <button class="read_btn1" onclick="location.href='pr_center_modify.php?idx=<?= $idx ?>'">수정하기</button>
+
+        <button class="read_btn1" onclick="ask();">삭제하기</button>
+
+    <script>
+        function ask() {
+            if (confirm("게시글을 삭제하시겠습니까?")) {
+                window.location = "delete.php?idx=<?= $idx ?>";
+            }
+        }
+    </script>
+
+<?php 
+// } 
+?>
+        </section>
+
     </main>
     <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhan/www/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/footer.php";
 ?>

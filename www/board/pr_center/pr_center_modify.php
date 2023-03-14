@@ -1,5 +1,5 @@
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhanv2/shinhan/www/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/header.php";
 
     $idx = $_GET['idx'];
     $query = "SELECT title, summary1, summary2, summary3, content, date from s_board where idx = '$idx'";
@@ -145,5 +145,5 @@
         </form>
     </main>
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhan/www/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/footer.php";
 ?>

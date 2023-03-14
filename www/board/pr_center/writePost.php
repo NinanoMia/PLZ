@@ -12,7 +12,7 @@
 
 
     // $query = "INSERT INTO s_board (title, summary1, summary2, summary3, content, img_file, date) VALUEs('$title', '$summary1', '$summary2', '$summary3', '$content', '$img_file', '$date')";
-    $query = "INSERT INTO s_board (title, summary1, summary2, summary3, content, img_file, date) VALUEs('$title', '$summary1', '$summary2', '$summary3', '$content', '$date')";
+    $query = "INSERT INTO s_board (title, summary1, summary2, summary3, content, date) VALUEs('$title', '$summary1', '$summary2', '$summary3', '$content', '$date')";
 
     $result = $conn->query($query);
 

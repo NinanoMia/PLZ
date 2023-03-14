@@ -40,23 +40,23 @@
             <div class="footer_bottom row">
                 <h2 class="footer_logo col-2">
                     <a href="index.html" title="메인페이지로 이동">
-                        <img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shinhan/www/www/images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
+                        <img src="/www/images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
                     </a>
                 </h2>
                 <ul class="col-2 d-flex ms-auto">
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shinhan/www/www/images/instagram.png" alt="인스타그램">
+                            <img src="/www/images/instagram.png" alt="인스타그램">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="페이스북">
-                            <img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shinhan/www/www/images/facebook.png" alt="페이스북">
+                            <img src="/www/images/facebook.png" alt="페이스북">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="<?php $_SERVER['DOCUMENT_ROOT'] ?>/shinhan/www/www/images/youtube.png" alt="인스타그램">
+                            <img src="/www/images/youtube.png" alt="인스타그램">
                         </a>
                     </li>
                 </ul>

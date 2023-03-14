@@ -1,5 +1,5 @@
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhanv2/shinhan/www/header.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/header.php";
 ?>
     <main>
         <link rel="stylesheet" href="./css/pr_center_write.css" type="text/css">
@@ -131,5 +131,5 @@
         </form>
     </main>
 <?php 
-    include $_SERVER['DOCUMENT_ROOT']."/project-shinhan/project-shinhan/www/footer.php";
+    include $_SERVER['DOCUMENT_ROOT']."/shinhan/www/footer.php";
 ?>
