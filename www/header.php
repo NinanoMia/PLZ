@@ -20,19 +20,19 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!-- reset.css -->
-    <link rel="stylesheet" href="/project-shinhan/project-shinhanv2/shinhan/www/css/reset.css" type="text/css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/shinhan/www/css/reset.css" type="text/css">
     <!-- common.css -->
-    <link rel="stylesheet" href="/project-shinhan/project-shinhanv2/shinhan/www/css/common.css" type="text/css">
+    <link rel="stylesheet" href="<?php $_SERVER['DOCUMENT_ROOT']?>/shinhan/www/css/common.css" type="text/css">
     <!-- base.css -->
-    <link rel="stylesheet" href="/project-shinhan/project-shinhanv2/shinhan/www/css/base.css" type="text/css">
+    <link rel="stylesheet" href="SHINHAN/www/css/base.css" type="text/css">
     <!-- common.js -->
-    <script src="/project-shinhan/project-shinhanv2/shinhan/www/js/common.js" defer></script>
+    <script src="<?php $_SERVER['DOCUMENT_ROOT']?>/shinhan/www/js/common.js" defer></script>
 </head>
 <body>
     <header class="d-flex align-items-center">
         <h1>
             <a href="./index.html" title="메인페이지 이동">
-                <img src="/project-shinhan/project-shinhanv2/shinhan/www/images/logo_white.png" alt="신한금융지주회사 로고">
+                <img src="/www/images/logo_white.png" alt="신한금융지주회사 로고">
             </a>
         </h1>
         <nav class="gnb">
