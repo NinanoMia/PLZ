@@ -227,13 +227,13 @@ font-weight:bold !important;
 }
 
 .img_box01:hover {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/introimg01.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/introimg01.jpg);
 }
 .img_box02:hover {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/introimg02.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/introimg02.jpg);
 }
 .img_box03:hover {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(/img/introimg03.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../images/introimg03.jpg);
 }
 
 
@@ -359,7 +359,7 @@ font-weight:bold !important;
 
       /* 3.IR투자자 영역 */
       #invest{
-        background-image:url(/img/investbg.jpg);
+        background-image:url(../images/investbg.jpg);
         background-size:cover;
         background-attachment: fixed;
         width:100%;
@@ -555,7 +555,7 @@ font-weight:bold !important;
         color:#222;
       }
       #invest .download{
-        text-align:center;
+        text-align:right;
       }
       #invest .download i{
         color:#0046ff;
@@ -578,7 +578,7 @@ font-weight:bold !important;
       }
       #board .t_box a{
         font-size:20px;
-        padding:18px 63px;
+        padding:13px 63px;
         border:1px solid #0046ff;
       }
       #board table{
@@ -607,17 +607,97 @@ font-weight:bold !important;
         color:#333;
         font-size:20px;
       }
+
       #board table tr td:last-child a:hover{
         color:#0046ff;
       }
-
       #board table{
         margin-bottom:130px;
       }
+      /* 모달 */
+      #modal{
+        z-index: 9999;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top:0; right: 0;
+        background: rgba(0,0,0,.5);
+      }
+      #banner{
+        overflow: hidden;
+        width: 450px;
+        position: absolute;
+        top: 50%;left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #banner>#img{
+        position: relative;
+        display: flex;
+        padding: 0px !important;
+        margin: 0px !important;
+      }
+      #banner img{
+        vertical-align: top;
+      }
+      #banner>p{
+        line-height: 50px;
+        background-color: #fff;
+        padding: 0px 20px;
+        position: relative;
+        margin: 0px !important;
+      }
+      #banner>p>input[type=button]{
+        position: absolute;
+        border: none;
+        line-height: 50px;
+        background: none;
+        right: 20px;
+      }
+      #m_close{
+        font-size: 16px;
+      }
+      ul, li{
+        list-style: none;
+      }
+      .mc_btn{
+        /* display: none; */
+        display: flex;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+      }
+      .mc_btn>li{
+        /* display: none; */
+        width: 15px;
+        height: 15px;
+        background: #ffffff;
+        border-radius: 50%;
+        margin: 0px 2px;
+        transition: 0.3s;
+        position: relative;
+        bottom: 22px;
+        border: 1px solid #0046FF;
+      }
+      #banner>i.bi{
+        cursor: pointer;
+        position: absolute;
+        color: #333;
+        background: rgba(255,255,255,.3);
+        top:45%;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      #banner>i.bi-chevron-right{
+        right: 0;
+      }
+      .m_on{
+        background:#0046FF !important;
+        width:50px !important;
+        border-radius:10px !important;
+        border: 1px solid #fff !important;
+      }
+      #m_close{
+        cursor: pointer;
+      }
 
-
-
-
-
-
-      
