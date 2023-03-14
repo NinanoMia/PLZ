@@ -7,13 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>신한금융지주_메인페이지</title>
       <!-- common.css -->
-      <link rel="stylesheet" href="./css/common.css" type="text/css">
-      <!-- main.css -->
-      <link rel="stylesheet" href="./css/main.css" type="text/css">
+      <link rel="stylesheet" href="../css/common.css" type="text/css">
+
       <!-- base.css -->
-      <link rel="stylesheet" href="./css/base.css" type="text/css">
+      <link rel="stylesheet" href="../css/base.css" type="text/css">
       <!-- reset.css -->
-      <link rel="stylesheet" href="./css/reset.css" type="text/css">
+      <link rel="stylesheet" href="../css/reset.css" type="text/css">
   <!-- bootstrap css -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -26,9 +25,8 @@
   <!-- 제이쿼리 cdn -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- common.js -->
-  <script src="./js/common.js" defer></script>
-  <!-- main.js -->
-  <script src="./js/main.js" defer></script>
+  <script src="../js/common.js" defer></script>
+
 </head>
 
 <body>
@@ -339,6 +337,13 @@
 
   <!-- 메인영역 -->
   <main>
+  <!-- main.css -->
+  <link rel="stylesheet" href="./css/main.css" type="text/css">
+      <!--제이쿼리 쿠키 연결하기-->
+  <script src="./js/jquery.cookie.js"></script>
+
+    <!-- main.js -->
+  <script src="./js/main.js" defer></script>
     <!-- 1.메인슬라이드 영역 -->
     <section id="mslide" class="w-100 vh-100">
 
@@ -357,7 +362,7 @@
 
         <!-- 2번째 슬라이드 -->
         <div class="banner_box w-100 h-100">
-          <img src="./img/mslide02.jpg" alt="mslide02" class="w-100 h-100" style="object-fit: cover;">
+          <img src="./images/mslide02.jpg" alt="mslide02" class="w-100 h-100" style="object-fit: cover;">
           <div class="t_box col-8 position-absolute top-50 start-50 translate-middle" style="text-align:center">
             <p>멋진 세상을 향한 올바른 실천</p>
             <h2>Do the Right Thing For a Wonderful World</h2>
@@ -366,7 +371,7 @@
 
         <!-- 3번째 슬라이드 -->
         <div class="banner_box w-100 h-100">
-          <img src="./img/mslide03.jpg" alt="mslide02" class="w-100 h-100" style="object-fit: cover;">
+          <img src="./images/mslide03.jpg" alt="mslide02" class="w-100 h-100" style="object-fit: cover;">
           <div class="t_box col-8 position-absolute top-50 start-50 translate-middle" style="text-align:center">
             <p>더 쉽고 편안한, 더 새로운 금융</p>
             <h2> 모두가 꿈꾸는 내일의 금융세상을 만듭니다.</h2>
@@ -406,9 +411,9 @@
               <p>신한금융그룹은 1982년 신한은행을 모태로 출범한 이래<br>수익성면에서 국내 1위를 차지하는 등<br>국내 대표금융그룹으로 자리잡고 있습니다.</p>
             </div>
 
-            <div class="img_wrap01 col-10 ms-auto p-0 m-0">
+            <div class="images_wrap01 col-10 ms-auto p-0 m-0">
               <div class="img_box01 position-relative">
-                <img src="./img/introimg01.jpg" alt="intro01">
+                <img src="./images/introimg01.jpg" alt="intro01">
               </div>
               <div class="t_box01">
                 <h3>ESG</h3>
@@ -419,18 +424,18 @@
           </div>
 
           <div class="col-6 row">
-            <div class="img_wrap02 col-10 ms-auto p-0 m-0">
+            <div class="images_wrap02 col-10 ms-auto p-0 m-0">
               <div class="img_box02 position-relative">
-                <img src="./img/introimg02.jpg" alt="intro01">
+                <img src="./images/introimg02.jpg" alt="intro01">
               </div>
               <div class="t_box01">
                 <h3>신한 WAY 2.0</h3>
                 <p>신한금융그룹이 지향하는 바와<br>모든 신한인의 생각,행동 기준을 나타내는 가치체계를 말하며<br>이는 미션, 핵심가치, 그룹비전으로 구성되어 있습니다.</p>
               </div>
             </div>
-            <div class="img_wrap03 col-10 ms-auto  p-0 m-0">
+            <div class="images_wrap03 col-10 ms-auto  p-0 m-0">
               <div class="img_box03 position-relative">
-                <img src="./img/introimg03.jpg" alt="intro01">
+                <img src="./images/introimg03.jpg" alt="intro01">
               </div>
               <div class="t_box01">
                 <h3>윤리경영</h3>
@@ -676,12 +681,41 @@
       </div>
     </section>
 
-
+    <script>
+      $(function(){
+        let modal = `
+        <div id="modal" class='m-0 p-0'>
+            <div id="banner">
+              <ul id="img">
+              <li><a href="https://shcard.incruit.com/main/main.asp" target='_blank' title="채용공고"><img src="./images/Group583.png" alt="채용공고"></a></li>
+              <li>
+              <a href="" title="결산공고"><img src="./images/Group584.png" alt="결산공고"></a></li>
+              </ul>
+              <ul class="mc_btn">
+                <li class="m_on">&nbsp;</li>
+                <li>&nbsp;</li>
+              </ul>
+              <i class="bi bi-chevron-left"></i>
+              <i class="bi bi-chevron-right"></i>
+              <p>
+                <input type="checkbox" id="ch">
+                <label for="ch">일주일간 창 보지 않기</label>
+                <input type="button" value="닫기" id="m_close">
+              </p>
+            </div>
+          </div>`;
+          console.log(modal);
+          $('body').append(modal);
+          $('#modal>#banner>p>#m_close').click(function(){
+            $('#modal').hide();
+          });
+      });
+    </script>
 
   </main>
   <!-- 푸터영역 -->
 
-  <footer>
+  <!-- <footer>
     <div class="footer_top">
         <div class="wrap row">
             <div class="col">
@@ -723,7 +757,7 @@
         <address class="footer_bottom row">
             <h2 class="footer_logo col-2">
                 <a href="index.html" title="메인페이지로 이동">
-                    <img src="./images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
+                    <img src="./images/logo_white.png" alt="신한금융지주회사 로고" class="images-fluid">
                 </a>
             </h2>
             <ul class="col-2 d-flex ms-auto">
@@ -748,7 +782,7 @@
             </p>
         </address>
     </div>
-</footer>
+</footer> -->
 
 </body>
 
