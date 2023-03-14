@@ -41,23 +41,23 @@
             <address class="footer_bottom d-flex flex-wrap">
                 <h2 class="footer_logo">
                     <a href="index.html" title="메인페이지로 이동">
-                        <img src="/project-shinhan/project-shinhan/m/images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
+                        <img src="./images/logo_white.png" alt="신한금융지주회사 로고" class="img-fluid">
                     </a>
                 </h2>
                 <ul class="d-flex ms-auto">
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="/project-shinhan/project-shinhan/m/images/instagram.png" alt="인스타그램">
+                            <img src="./images/instagram.png" alt="인스타그램">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="페이스북">
-                            <img src="/project-shinhan/project-shinhan/m/images/facebook.png" alt="페이스북">
+                            <img src="./images/facebook.png" alt="페이스북">
                         </a>
                     </li>
                     <li>
                         <a href="#" title="인스타그램">
-                            <img src="/project-shinhan/project-shinhan/m/images/youtube.png" alt="인스타그램">
+                            <img src="./images/instagram.png" alt="인스타그램">
                         </a>
                     </li>
                 </ul>
